@@ -659,7 +659,7 @@ header nav a.active {
 #contact {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     padding: max(100px) 10px 0px;
 }
@@ -709,4 +709,43 @@ header nav a.active {
 }
 #contact .column .email p a:hover {
     color: var(--blue-200);
+}
+
+#contact .column form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#contact .column form h3 {
+    font-family: var(--font-family);
+    font-size: var(--desktop-h5-font-size);
+    margin-bottom: max(12px);
+    width: 100%;
+}
+
+#contact .column form input,
+#contact .column form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: var(--desktop-h6-font-size);
+    border: 2px solid var(--shade-300);
+    background-color: var(--shade-1000);
+    color: var(--shade-50);
+    font-weight: 600;
+}
+
+#contact .column form textarea {
+    height: 233px;
+    resize: none;
+}
+
+#contact .column form .button {
+    width: fit-content;
+    outline: none;
+    border: none;
+    margin-top: max(12px);
 }
