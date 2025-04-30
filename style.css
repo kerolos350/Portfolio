@@ -512,14 +512,14 @@ header nav a.active {
 #services .services-container .blur:nth-child(6) {
     width: max(300px);
     height: max(400px);
-    top: 150px;
+    top: 120px;
     right: 180px;
 }
 
 #services .services-container .blur:nth-child(7) {
     width: max(360px);
     height: max(350px);
-    bottom: 190px;
+    bottom: 120px;
     left: 180px;
 }
 
@@ -654,4 +654,59 @@ header nav a.active {
     height: max(250px);
     bottom: 450px;
     right: 100px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: max(100px) 10px 0px;
+}
+
+#contact .column {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#contact .column h2 {
+    font-family: var(--font-family);
+    font-size: var(--desktop-h2-font-size);
+    margin-bottom: max(10px);
+}
+
+#contact .column p {
+    font-size: var(--desktop-h5-font-size);
+    margin-bottom: max(43px);
+}
+
+#contact .column .email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#contact .column .email img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+    margin: 0 5px 1px 0 !important;
+}
+
+#contact .column .email p {
+    font-size: var(--desktop-h5-font-size);
+    margin: 0 !important;
+    font-weight: 600;
+}
+
+#contact .column .email p a {
+    color: var(--blue-500);
+    text-decoration: none;
+}
+#contact .column .email p a:hover {
+    color: var(--blue-200);
 }
