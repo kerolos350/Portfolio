@@ -712,6 +712,18 @@ header nav a.active {
     color: var(--blue-200);
 }
 
+#contact .column .blur {
+    width: max(200px);
+    height: max(300px);
+    background: var(--blue-500);
+    filter: blur(70px);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(45deg);
+    left: 120px;
+}
+
 #contact .column form {
     display: flex;
     flex-direction: column;
@@ -761,6 +773,7 @@ footer {
     justify-content: space-between;
     background-color: var(--shade-900);
     border-radius: 25px 25px 0px 0px;
+    margin-top: 72px;
 }
 
 footer p {
