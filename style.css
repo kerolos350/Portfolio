@@ -706,6 +706,7 @@ header nav a.active {
 #contact .column .email p a {
     color: var(--blue-500);
     text-decoration: none;
+    font-weight: 400;
 }
 #contact .column .email p a:hover {
     color: var(--blue-200);
@@ -748,4 +749,54 @@ header nav a.active {
     outline: none;
     border: none;
     margin-top: max(12px);
+}
+
+footer {
+    height: 100px;
+    width: calc(100vw - 20px);
+    padding: 0 calc(50vw - max(576px));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--shade-900);
+    border-radius: 25px 25px 0px 0px;
+}
+
+footer p {
+    font-size: var(--desktop-h6-font-size);
+    color: var(--shade-50);
+}
+
+footer .socials {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+footer .socials a {
+    color: var(--shade-50);
+    text-decoration: none;
+    height: 28px;
+}
+
+footer .socials a img {
+    filter: invert(1);
+    height: 28px;
+}
+
+footer .socials a:nth-child(1) img:hover {
+    filter: invert(23%) sepia(97%) saturate(1413%) hue-rotate(199deg) brightness(101%) contrast(101%);
+}
+
+footer .socials a:nth-child(2) img:hover {
+    filter: invert(54%) sepia(88%) saturate(747%) hue-rotate(176deg) brightness(97%) contrast(101%);
+}
+
+footer .socials a:nth-child(3) img:hover {
+    filter: invert(34%) sepia(94%) saturate(476%) hue-rotate(308deg) brightness(101%) contrast(90%);
+}
+
+footer .socials a:nth-child(4) img:hover {
+    filter: invert(7%) sepia(6%) saturate(437%) hue-rotate(342deg) brightness(95%) contrast(91%);
 }
