@@ -898,6 +898,10 @@ footer .socials a:nth-child(4) img:hover {
         gap: 50px;
         text-align: center;
     }
+
+    #home .hero-image .mask {
+        right: 5%;
+    }
     
     .hero {
         width: 100%;
@@ -956,6 +960,11 @@ footer .socials a:nth-child(4) img:hover {
         --desktop-h6-font-size: var(--mobile-h6-font-size);
         --desktop-p-font-size: var(--mobile-p-font-size);
         --desktop-caption-font-size: var(--mobile-caption-font-size);
+    }
+    
+    section {
+        overflow-x: hidden;
+        overflow-x: clip;
     }
     
     header {
@@ -1022,6 +1031,12 @@ footer .socials a:nth-child(4) img:hover {
     }
 }
 
+@media screen and (max-width: 530px) {
+    #home .hero-image .mask {
+        right: 2%;
+    }
+}
+
 @media screen and (max-width: 480px) {
     header nav ul {
         flex-direction: column;
@@ -1034,6 +1049,11 @@ footer .socials a:nth-child(4) img:hover {
     
     #home .hero-image {
         width: 100%;
+    }
+
+    #home .hero-image .mask {
+        width: 120%;
+        right: -5%;
     }
     
     #services .services-container .service-card .service-details {
