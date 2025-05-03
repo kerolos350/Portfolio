@@ -926,6 +926,10 @@ footer .socials a:nth-child(4) img:hover {
         width: 100%;
         padding-left: 0;
     }
+
+    #about .about-content-container .column:nth-child(3) .about-content {
+        align-items: centerv;
+    }
     
     #contact {
         flex-direction: column;
@@ -987,6 +991,10 @@ footer .socials a:nth-child(4) img:hover {
     
     #services .services-container .service-card:nth-child(1) .service-details {
         grid-template-columns: auto auto !important;
+    }
+
+    #services .services-container .service-card:nth-child(1) .service-header .service-icon-container {
+        flex-direction: column;
     }
     
     #projects .raw .projects {
