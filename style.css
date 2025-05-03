@@ -848,9 +848,6 @@ footer .socials a:nth-child(4) img:hover {
     filter: invert(7%) sepia(6%) saturate(437%) hue-rotate(342deg) brightness(95%) contrast(91%);
 }
 
-/* Media Queries for Responsiveness */
-
-/* Large tablets and small laptops */
 @media screen and (max-width: 1200px) {
     header {
         display: inline-block;
@@ -886,10 +883,8 @@ footer .socials a:nth-child(4) img:hover {
     }
 }
 
-/* Tablets */
 @media screen and (max-width: 992px) {
     :root {
-        /* Use slightly smaller font sizes for tablets */
         --desktop-h1-font-size: 56px;
         --desktop-h2-font-size: 38px;
     }
@@ -951,10 +946,8 @@ footer .socials a:nth-child(4) img:hover {
     }
 }
 
-/* Mobile Phones */
 @media screen and (max-width: 768px) {
     :root {
-        /* Use mobile font sizes */
         --desktop-h1-font-size: var(--mobile-h1-font-size);
         --desktop-h2-font-size: var(--mobile-h2-font-size);
         --desktop-h3-font-size: var(--mobile-h3-font-size);
@@ -1029,7 +1022,6 @@ footer .socials a:nth-child(4) img:hover {
     }
 }
 
-/* Small Phones */
 @media screen and (max-width: 480px) {
     header nav ul {
         flex-direction: column;
