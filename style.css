@@ -120,7 +120,7 @@ header .menu-icon .menu-bar {
 }
 
 header input[type="checkbox"]:checked + .menu-icon .menu-bar:nth-child(1) {
-    transform: rotate(45deg) translateY(10px) translateX(7px);
+    transform: rotate(45deg) translateY(10px) translateX(8px);
 }
 
 header input[type="checkbox"]:checked + .menu-icon .menu-bar:nth-child(2) {
@@ -128,7 +128,7 @@ header input[type="checkbox"]:checked + .menu-icon .menu-bar:nth-child(2) {
 }
 
 header input[type="checkbox"]:checked + .menu-icon .menu-bar:nth-child(3) {
-    transform: rotate(-45deg) translateY(-10px) translateX(7px);
+    transform: rotate(-45deg) translateY(-10px) translateX(8px);
 }
 
 header nav {
@@ -1073,6 +1073,10 @@ footer .socials a:nth-child(4) img:hover {
     header nav {
         width: 100%;
         padding: 10px;
+    }
+
+    header input[type="checkbox"]:checked ~ .mobile-menu {
+        transform: translateY(65px);
     }
     
     header nav ul {
