@@ -65,6 +65,7 @@ body {
     align-items: center;
     width: min(100%, 1152px);
     margin: 0 auto;
+    overflow-x: hidden;
     
 }
 
@@ -232,7 +233,7 @@ header nav a.active {
     position: relative;
     top: -6px;
     border-radius: 50px;
-    padding: min(90px, 8%) min(99px, 8%) min(100px, 8%);
+    padding: min(8%, 90px) min(3%, 99px) min(8%, 100px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -249,11 +250,16 @@ header nav a.active {
     color: var(--blue-500);
 }
 
+#about .about-content {
+    height: 50%;
+}
+
 #about .about-content-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: fit-content;
+    position: relative;
 }
 
 #about .about-content-container .column {
@@ -264,20 +270,70 @@ header nav a.active {
 }
 
 #about .about-content-container .column:nth-child(1) {
-    width: fit-content;
-    padding-right: 15px;
-    z-index: 2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 150px;
 }
 
 #about .about-content-container .column:nth-child(1) .about-label {
     font-size: var(--desktop-h4-font-size);
     font-weight: 600;
-    height: 50%;
+}
+
+#about .about-content-container .column:nth-child(1) .about-content {
+    font-size: var(--desktop-h6-font-size);
+    gap: 24px;
+    height: fit-content;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#about .about-content-container .skills {
+    display: flex;
+    flex-direction: column;
+    height: fit-content !important;
+}
+
+#about .about-content-container .skills .about-row {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+}
+
+#about .about-content-container .skills .about-row:nth-child(1),
+#about .about-content-container .skills .about-row:nth-child(3) {
+    margin-left: 35px;
+}
+
+#about .about-content-container .skills .about-row:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+#about .about-content-container .skills .about-row .skill {
+    width: min(70px);
+    height: min(70px);
+    background-color: var(--shade-700);
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--desktop-caption-font-size);
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px var(--blue-300);
+}
+
+#about .about-content-container .skills .about-row .skill-icon {
+    width: min(29px, 100%);
+    height: min(29px, 100%);
 }
 
 #about .about-content-container .column:nth-child(2) {
     width: 20px;
-    overflow:visible
+    overflow:visible;
+    position: absolute;
+    height: 100%;
+    left: 200px;
 }
 
 #about .about-content-container .column:nth-child(2) .scroll-indicator {
@@ -321,61 +377,7 @@ header nav a.active {
 }
 
 #about .about-content-container .scroll-indicator .dot:nth-child(3) {
-    bottom: calc(50% - 30px);
-}
-
-#about .about-content-container .column:nth-child(3) {
-    width: calc(70%);
-    padding-left: 50px;
-}
-
-#about .about-content {
-    height: 50%;
-}
-
-#about .about-content-container .column:nth-child(3) .about-content {
-    font-size: var(--desktop-h6-font-size);
-    gap: 20px;
-    height: fit-content;
-}
-
-#about .about-content-container .skills {
-    display: flex;
-    flex-direction: column;
-    height: fit-content !important;
-}
-
-#about .about-content-container .skills .about-row {
-    display: flex;
-    flex-direction: row;
-    gap: 28px;
-}
-
-#about .about-content-container .skills .about-row:nth-child(1),
-#about .about-content-container .skills .about-row:nth-child(3) {
-    margin-left: 35px;
-}
-
-#about .about-content-container .skills .about-row:nth-child(3) {
-    margin-bottom: 10px;
-}
-
-#about .about-content-container .skills .about-row .skill {
-    width: min(70px);
-    height: min(70px);
-    background-color: var(--shade-700);
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    font-size: var(--desktop-caption-font-size);
-    font-weight: 600;
-    border-radius: 5px;
-    box-shadow: 3px 3px 5px var(--blue-300);
-}
-
-#about .about-content-container .skills .about-row .skill-icon {
-    width: min(29px, 100%);
-    height: min(29px, 100%);
+    bottom: calc(50% - 5px);
 }
 
 #services {
@@ -850,7 +852,7 @@ footer .socials a:nth-child(4) img:hover {
 
 @media screen and (max-width: 1200px) {
     header {
-        display: inline-block;
+        display: flex;
     }
 
     header nav, header a {
@@ -920,6 +922,7 @@ footer .socials a:nth-child(4) img:hover {
         width: 100%;
         padding-right: 0;
         margin-bottom: 20px;
+        display: flex;
     }
     
     #about .about-content-container .column:nth-child(2) {
@@ -969,7 +972,6 @@ footer .socials a:nth-child(4) img:hover {
     
     header {
         height: auto;
-        flex-direction: column;
         padding: 15px 10px;
     }
     
