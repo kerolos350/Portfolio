@@ -92,7 +92,6 @@ header {
     top: 0;
     left: 0;
     padding: 0 calc(50% - min(576px, 47%));
-    z-index: 5;
     background-color: #202831de;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -166,6 +165,10 @@ header nav a:hover {
 
 header nav a.active {
     color: var(--blue-500);
+}
+
+header .mobile-menu {
+    display: none;
 }
 
 .button {
@@ -884,7 +887,7 @@ footer .socials a:nth-child(4) img:hover {
 @media screen and (max-width: 1200px) {
     header {
         display: flex;
-        z-index: 2;
+        z-index: 5;
     }
 
     header nav, header a {
@@ -901,7 +904,6 @@ footer .socials a:nth-child(4) img:hover {
         height: 0px;
         border: none;
         border-radius: 0px;
-        z-index: -1;
         transition: all 0.4s ease-in-out;
     }
 
