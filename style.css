@@ -285,10 +285,12 @@ header .mobile-menu {
     font-size: var(--mobile-h5-font-size);
     font-weight: 600;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
     background-color: var(--blue-800);
+    transform: scale(1.05);
 }
 
 #home {
@@ -380,6 +382,22 @@ header .mobile-menu {
 .hero .button-large .icon {
     height: 36px;
     filter: invert(1);
+}
+
+.hero .button-large:hover .icon {
+    animation: slide 1s ease-in-out infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 #about {
@@ -476,6 +494,12 @@ header .mobile-menu {
     font-weight: 600;
     border-radius: 5px;
     box-shadow: 3px 3px 5px var(--blue-300);
+    transition: all 0.3s ease-in-out;
+}
+
+#about .about-content-container .skills .about-row .skill:hover {
+    background-color: var(--shade-500);
+    transform: scale(1.05);
 }
 
 #about .about-content-container .skills .about-row .skill-icon {
@@ -645,6 +669,14 @@ header .mobile-menu {
     color: var(--blue-50);
     gap: 10px;
     margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+
+#services .services-container .service-card .hire-me:hover {
+    background-color: var(--blue-500);
+    color: var(--shade-50);
+    box-shadow: 0 0 5px var(--shade-800) inset;
+    border: none;
 }
 
 #services .services-container .service-card .hire-me .arrow {
@@ -763,7 +795,10 @@ header .mobile-menu {
     flex-direction: column;
     background: var(--shade-1000);
     z-index: 2;
+}
 
+#projects .raw .projects .project:hover {
+    transform: scale(1.05);
 }
 
 #projects .raw .projects .project img {
@@ -798,6 +833,14 @@ header .mobile-menu {
     padding: 5px;
     border-radius: 5px;
     margin: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#projects .raw .projects .project .content .techs .tech:hover {
+    color: var(--shade-50);
 }
 
 #projects .raw .projects .project .content .description {
@@ -938,14 +981,16 @@ header .mobile-menu {
     border: 2px solid var(--shade-300);
     background-color: var(--shade-1000);
     color: var(--shade-50);
-    font-weight: 600;
+    font-weight: 500;
     outline: none;
+    transition: all 0.3s ease-in-out;
 }
 
 #contact .column form input:focus,
 #contact .column form textarea:focus {
     border: 2px solid var(--blue-500);
     box-shadow: 0 0 2px var(--blue-500);
+    font-weight: 600;
 }
 
 #contact .column form textarea {
@@ -993,6 +1038,7 @@ footer .socials a {
 footer .socials a img {
     filter: invert(1);
     height: 28px;
+    transition: all 0.2s ease-in-out;
 }
 
 footer .socials a:nth-child(1) img:hover {
