@@ -549,6 +549,26 @@ header .mobile-menu {
     background-color: var(--blue-400);
     filter: blur(40px);
     border-radius: 125px;
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0% {
+        transform: scale(1);
+        background-color: var(--blue-300);
+        transform: translateX(1px);
+    }
+    50% {
+        transform: scale(1.05);
+        background-color: var(--blue-400);
+        transform: translateX(0px);
+    }
+    100% {
+        transform: scale(1);
+        background-color: var(--blue-300);
+        transform: translateX(1px);
+    }
+    
 }
 
 #about .about-content-container .scroll-indicator .dot:nth-child(2) {
@@ -683,6 +703,11 @@ header .mobile-menu {
     width: 16px;
     height: 16px;
     filter: invert(1);
+    transition: all 0.3s ease-in-out;
+}
+
+#services .services-container .service-card .hire-me:hover .arrow {
+    animation: slide 1s ease-in-out infinite;
 }
 
 #services .services-container .service-card .hire-me p {
@@ -727,6 +752,7 @@ header .mobile-menu {
     height: min(400px, 50%);
     top: 120px;
     right: 180px;
+    animation: circle1 10s linear infinite;
 }
 
 #services .services-container .blur:nth-child(7) {
@@ -734,6 +760,31 @@ header .mobile-menu {
     height: min(350px, 50%);
     bottom: 120px;
     left: 180px;
+    animation: circle2 10s linear infinite;
+}
+
+@keyframes circle1 {
+    0% {
+        transform: rotate(0deg) translateX(0px) translateY(0px);
+    }
+    50% {
+        transform: rotate(360deg) translateX(100px) translateY(160px);
+    }
+    100% {
+        transform: rotate(720deg) translateX(0px) translateY(0px);
+    }
+}
+
+@keyframes circle2 {
+    0% {
+        transform: rotate(0deg) translateX(-80px) translateY(0px);
+    }
+    50% {
+        transform: rotate(360deg) translateX(0px) translateY(-160px);
+    }
+    100% {
+        transform: rotate(720deg) translateX(-80px) translateY(0px);
+    }
 }
 
 #projects {
@@ -867,6 +918,7 @@ header .mobile-menu {
     height: min(380px, 50%);
     top: 250px;
     right: -200px;
+    animation: shake 10s ease-in-out infinite;
 }
 
 #projects .blur:nth-child(7) {
@@ -874,6 +926,7 @@ header .mobile-menu {
     height: min(350px, 50%);
     top: 900px;
     left: -200px;
+    animation: shake 10s ease-in-out infinite;
 }
 
 #projects .blur:nth-child(8) {
@@ -881,6 +934,23 @@ header .mobile-menu {
     height: min(250px, 50%);
     bottom: 450px;
     right: 100px;
+    animation: shake 10s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+        transform: translateX(0px) translateY(0px);
+    }
+    50% {
+        transform: rotate(360deg);
+        transform: translateX(100px) translateY(160px);
+    }
+    100% {
+        transform: rotate(0deg);
+        transform: translateX(0px) translateY(0px);
+    }
+    
 }
 
 #contact {
