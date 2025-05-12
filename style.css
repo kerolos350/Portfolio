@@ -57,6 +57,27 @@
     scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--shade-1000);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--blue-500);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--blue-400);
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background: var(--blue-300);
+}
+
 .hidden {
     display: none;
 }
@@ -194,7 +215,7 @@ header .mobile-menu {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 130px 10px 0px 10px;
+    padding: 180px 10px 150px 10px;
 }
 
 #home .home-text {
@@ -204,6 +225,18 @@ header .mobile-menu {
 #home .hero-image {
     width: min(100%, 490px);
     position: relative;
+}
+
+#home .hero-image::after {
+    content: "";
+    position: absolute;
+    bottom: -29%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: var(--shade-1000);
+    filter: blur(15px);
+    z-index: 1;
 }
 
 #home .hero-image .profile-image {
@@ -591,7 +624,6 @@ header .mobile-menu {
     justify-content: center;
     position: relative;
     padding: min(100px, 8%) 10px 0px;
-    overflow: hidden;
 }
 
 #projects h2 {
@@ -820,6 +852,13 @@ header .mobile-menu {
     background-color: var(--shade-1000);
     color: var(--shade-50);
     font-weight: 600;
+    outline: none;
+}
+
+#contact .column form input:focus,
+#contact .column form textarea:focus {
+    border: 2px solid var(--blue-500);
+    box-shadow: 0 0 2px var(--blue-500);
 }
 
 #contact .column form textarea {
@@ -993,6 +1032,11 @@ footer .socials a:nth-child(4) img:hover {
         text-align: center;
     }
 
+    #home .hero-image::after {
+        height: 25%;
+        bottom: -15%;
+    }
+
     #home .hero-image .mask {
         right: 5%;
     }
@@ -1100,6 +1144,12 @@ footer .socials a:nth-child(4) img:hover {
 
     #services .services-container .service-card:nth-child(1) .service-header .service-icon-container {
         flex-direction: column;
+    }
+
+    #projects {
+        width: 100%;
+        padding: 0px 10px;
+        overflow: hidden;
     }
     
     #projects .raw .projects {
