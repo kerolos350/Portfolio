@@ -55,6 +55,7 @@
     padding: 0;
     font-family: var(--font-family);
     scroll-behavior: smooth;
+    scroll-margin: 30px;
 }
 
 body::-webkit-scrollbar {
@@ -80,6 +81,12 @@ body::-webkit-scrollbar-thumb:active {
 
 .hidden {
     display: none;
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 body {
@@ -124,6 +131,7 @@ header .logo {
     font-size: var(--desktop-h4-font-size);
     color: var(--blue-500);
     margin: 0 !important;
+    text-decoration: none;
 }
 
 header .menu-icon {
@@ -225,6 +233,9 @@ header .mobile-menu {
 #home .hero-image {
     width: min(100%, 490px);
     position: relative;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #home .hero-image::after {
@@ -285,6 +296,7 @@ header .mobile-menu {
 .hero .button-large {
     font-size: 23px;
     display: flex;
+    align-items: center;
     gap: 10px;
     width: fit-content;
     padding: 8px 12px;
@@ -934,6 +946,10 @@ footer .socials a:nth-child(4) img:hover {
         display: none;
     }
 
+    header .logo {
+        display: flex;
+    }
+
     header .mobile-menu {
         display: flex;
         position: absolute;
@@ -1189,6 +1205,10 @@ footer .socials a:nth-child(4) img:hover {
     header nav ul {
         flex-direction: column;
         align-items: center;
+    }
+
+    header input[type="checkbox"]:checked ~ .mobile-menu ul li {
+        width: 100%;
     }
     
     .hero .button-large {
