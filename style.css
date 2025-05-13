@@ -66,6 +66,8 @@
     height: 100svh;
     background-color: var(--shade-1000);
     display: flex;
+    flex-direction: column;
+    gap: 40px;
     align-items: center;
     justify-content: center;
     z-index: 10;
@@ -131,6 +133,25 @@
 
 #loader .container {
     scale: 3;
+}
+
+#loader p {
+    font-size: var(--desktop-h4-font-size);
+    font-weight: 800;
+    text-align: center;
+    animation: fade 1s ease-in-out infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
 }
 
 body::-webkit-scrollbar {
@@ -330,6 +351,12 @@ header .mobile-menu {
 #home .hero-image .profile-image {
     width: min(100%, 490px);
     object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+#home .hero-image .profile-image:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0px 0px 3px var(--blue-300));
 }
 
 #home .hero-image .mask {
