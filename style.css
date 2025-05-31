@@ -470,7 +470,7 @@ header .mobile-menu {
     position: relative;
     top: -6px;
     border-radius: 50px;
-    padding: min(8%, 90px) min(3%, 99px) min(8%, 100px);
+    padding: min(8%, 90px) min(3%, 99px) min(8%, 100px) min(8%, 70px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -530,6 +530,7 @@ header .mobile-menu {
     display: flex;
     flex-direction: column;
     height: fit-content !important;
+    margin-bottom: 20px;
 }
 
 #about .about-content-container .skills .about-row {
@@ -563,6 +564,7 @@ header .mobile-menu {
 
 #about .about-content-container .skills .about-row .skill:hover {
     background-color: var(--shade-500);
+    color: var(--shade-50);
     transform: scale(1.05);
 }
 
