@@ -666,6 +666,7 @@ header .mobile-menu {
 #services p {
     font-size: var(--desktop-h6-font-size);
     margin-bottom: 36px;
+    text-align: center;
 }
 
 #services .services-container {
@@ -912,10 +913,6 @@ header .mobile-menu {
     flex-direction: column;
     background: var(--shade-1000);
     z-index: 2;
-}
-
-#projects .raw .projects .project:hover {
-    transform: scale(1.05);
 }
 
 #projects .raw .projects .project img {
@@ -1423,6 +1420,7 @@ footer .socials a:nth-child(4) img:hover {
         width: 100%;
         padding: 0px 10px;
         overflow: hidden;
+        margin-top: 72px;
     }
     
     #projects .raw .projects {
