@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             toggleActions: "play none none reverse"
                         },
                         duration: 1,
-                        x: -100,
+                        y: 100,
                         opacity: 0,
                         ease: "power4.out",
                         delay: 0.5 + (index * 0.2)
